@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import SearchBar from './components/search_bar';
 
 const API_KEY = "AIzaSyBWkyIAQOSeJidl-bwP3KL-isyDsngnkDc";
 
@@ -13,8 +14,12 @@ const API_KEY = "AIzaSyBWkyIAQOSeJidl-bwP3KL-isyDsngnkDc";
 
 // Alternative to above code. It is more like member lamba.
 const App = () => {
-  return <div>Hi!</div>
-}
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
+};
 
 // Take this component's generated HTML and put it
 // on the page (in the DOM).
