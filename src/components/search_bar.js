@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // declare component using function
 //const SearchBar = () => {
@@ -6,9 +6,28 @@ import React from 'react';
 //};
 
 // declare component using class based component
-class SearchBar extends React.Component {
+class SearchBar extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = { term: '' };
+  }
+
   render() {
-    return <input />;
+    return (
+      <div>
+      <input
+        id="demo"
+        value={this.state.term}
+        onChange = { this.onInputChange }
+        />
+      </div>
+    );
+  }
+
+  onInputChange = (event) => {
+    this.setState({ term: event.target.value });
   }
 }
 
